@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /* Universal Selector */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Type Selector */
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      /* Class Selector */
+      .highlights {
+        background-color: #3c88b0;
+      }
+
+      /* ID selector */
+      #header {
+        background-color: #693939;
+        color: whitesmoke;
+      }
+      /* Attribute Selector */
+      input[type="text"] {
+        border: 3px solid #21a2;
+      }
+      /* Descendent Selector */
+      article p {
+        font-style: italic;
+        background-color: #1a1a1a;
+        color: azure;
+        padding: 7px;
+      }
+      /* Child Selector */
+      div > p {
+        background-color: #7d2d2d;
+      }
+      /* Adjacent Sibling Selector */
+      h1 + p {
+        font-weight: bold;
+      }
+      /* General Sibling Selector */
+      h2 ~ p {
+        color: #804444;
+      }
+      /* Pseudo-class Selector */
+      a:hover {
+        background-color: #1a1a1a;
+        text-decoration: none;
+        color: white;
+        padding: 4px;
+        margin: 4px;
+      }
+
+      /* Pseudo-element Selector  */
+      p::first-letter {
+        font-weight: bold;
+        font-size: 31px;
+      }
+      /* Grouping Selector */
+      h1,h2,h3{
+        color: tomato;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header id="header">This is a header</header>
+    <h1>Main heading</h1>
+    <p>
+      This paragraph is adjacent to h1 and demonstrates the adjacent siblings
+      selector.
+    </p>
+    <p>This is a regular paragraph showing the type selector</p>
+
+    <p class="highlights">
+      This paragraph has a highlight class, demonstrating the class selector.
+    </p>
+    <input type="text" placeholder="Enter text here" />
+    <article>
+      <p>
+        This paragraph is inside an articel, showing the descendent selector.
+      </p>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          illum vero exercitationem.
+        </p>
+      </div>
+    </article>
+
+    <div>
+      <p>I am a child</p>
+      <p>I am a child</p>
+      <section>
+        <p>I am a Descendent</p>
+      </section>
+      <p>I am a child.</p>
+    </div>
+
+    <h2>Sub heading</h2>
+    <p>
+      This is a sibling paragraph to h2, demonstrating the general sibling
+      selector.
+    </p>
+    <a href="#">Hover over me to see the pseudo-class selector in actions</a>
+
+    <p>
+      This paragraph demonstrates pseudo-element selectors with a styled first
+      line and first letter.
+    </p>
+    <h3>Heading 3</h3>
+    <p>
+      The headings h1,h2 and h3 use the grouping selector for consistent font
+      family.
+    </p>
+  </body>
+</html>
